@@ -1,0 +1,13 @@
+# Deny access to sensitive files
+<FilesMatch "\.(json|log|db|htaccess)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Allow access to index.php only
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
