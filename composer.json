@@ -1,0 +1,6 @@
+{
+    "name": "telegram-bot/render",
+    "description": "Telegram Bot for Render.com",
+    "type": "project",
+    "require": {}
+}
